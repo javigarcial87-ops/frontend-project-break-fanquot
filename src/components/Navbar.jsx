@@ -4,7 +4,7 @@ function Navbar() {
     return (
         <>
         <nav>
-            <Link to="/">Home</Link>
+            <Link to="/">Home | </Link>
             <Link to="/create">Crear Card</Link>
         </nav>
         </>
