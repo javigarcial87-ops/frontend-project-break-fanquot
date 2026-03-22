@@ -51,14 +51,49 @@ function App() {
     }
   }
 
-
-
-
-
-
   return (
-    <div>
+    <>
+     <div>
       <h1>FanQuot</h1>
+
+       <form onSubmit={handleSubmit}>
+        <input
+          name="characterName"
+          placeholder="Character"
+          value={form.characterName}
+          onChange={handleChange}
+        />
+
+        <input
+          name="characterImage"
+          placeholder="Image URL"
+          value={form.characterImage}
+          onChange={handleChange}
+        />
+
+        <input
+          name="mediaType"
+          placeholder="Type (movie, tv, videogame...)"
+          value={form.mediaType}
+          onChange={handleChange}
+        />
+
+        <input
+          name="mediaTitle"
+          placeholder="Title"
+          value={form.mediaTitle}
+          onChange={handleChange}
+        />
+
+        <input
+          name="quote"
+          placeholder="Quote"
+          value={form.quote}
+          onChange={handleChange}
+        />
+
+        <button type="submit">Crear Card</button>
+      </form>
 
       <div className="cardsContainer">
         {cards.map((card) => (
@@ -66,6 +101,8 @@ function App() {
         ))}
       </div>
     </div>
+    
+    </>
   )
 }
 
