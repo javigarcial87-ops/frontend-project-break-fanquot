@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { getCards } from "../services/cardService"
+import { getCards, deleteCard } from "../services/cardService"
 import Card from "../components/Card"
 
 function Home() {
@@ -10,6 +10,12 @@ function Home() {
             .then(data => setCards(data))
             .catch(err => console.error(err))
   }, [])
+
+  const handleDelete = async (id)=>{
+    await deleteCard(id)
+
+    setCards(prev => prev.filter(card=> card._id !== id))
+  }
 
   return (
     <>
