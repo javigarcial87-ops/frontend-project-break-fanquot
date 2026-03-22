@@ -1,15 +1,60 @@
 import { useEffect, useState } from "react"
 import Card from "./components/Card"
+import {getCards, createCard} from "./services/cardService"
 
 function App() {
   const [cards, setCards] = useState([])
 
+  const [form,setForm]= useState({
+    characterName: "",
+    characterImage: "",
+    mediaType: "",
+    mediaTitle: "",
+    quote: ""
+  })
+
   useEffect(() => {
-    fetch("http://localhost:4000/cards")
-      .then(res => res.json())
-      .then(data => setCards(data))
-      .catch(err => console.error(err))
+   getCards()
+    .then(data => setCards(data))
+    .catch(err => console.error(err))
   }, [])
+
+  const handleChange = (e) => {
+    setForm({
+      ...form,
+      [e.target.name]: e.target.value
+    })
+  }
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+
+    try {
+      const newCard = await createCard({
+        ...form,
+        likes: 0,
+        likedBy: []
+      })
+
+      setCards(prev =>[...prev, newCard])
+
+      setForm({
+        characterName: "",
+        characterImage: "",
+        mediaType: "",
+        mediaTitle: "",
+        quote: ""
+      })
+
+    } catch (error) {
+      console.error("Error al crear card:", error)
+    }
+  }
+
+
+
+
+
 
   return (
     <div>
