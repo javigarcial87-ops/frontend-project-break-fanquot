@@ -24,7 +24,11 @@ function Home() {
 
          <div className="cardsContainer">
             {cards.map((card) => (
-             <Card key={card._id} card={card} />
+             <Card 
+                key={card._id} 
+                card={card}
+                onDelete={handleDelete}
+                />
         ))}
       </div>
     </div>

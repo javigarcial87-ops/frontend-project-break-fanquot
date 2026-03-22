@@ -8,7 +8,7 @@ function Card({ card, onDelete }) {
       <p>"{card.quote}"</p>
 
       <button onClick={()=>onDelete(card._id)}>
-        borrar
+        Delete
       </button>
     </div>
   )
