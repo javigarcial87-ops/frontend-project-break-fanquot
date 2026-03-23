@@ -4,7 +4,8 @@ import Card from "../components/Card"
 
 function Home() {
     const [cards, setCards] = useState([])
-
+    const [currentPage,setCurrentPage] =useState(1)
+    const cardsPerPage = 8
     useEffect(() => {
         getCards()
             .then(data => setCards(data))
@@ -16,6 +17,8 @@ function Home() {
 
     setCards(prev => prev.filter(card=> card._id !== id))
   }
+
+  const indexOfLastCard
 
   return (
     <>
