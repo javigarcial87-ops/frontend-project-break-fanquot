@@ -1,4 +1,4 @@
-function Card({ card, onDelete }) {
+function Card({ card, onDelete, onLike }) {
   return (
     <div className="card">
       <h3>{card.characterName}</h3>
@@ -10,7 +10,12 @@ function Card({ card, onDelete }) {
       <button onClick={()=>onDelete(card._id)}>
         Delete
       </button>
+      <p>❤️{card.likes}</p>
+      <button onClick={()=> onLike(card._id)}>
+        Like
+      </button>
     </div>
+
   )
 }
 

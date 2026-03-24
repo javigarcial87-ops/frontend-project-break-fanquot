@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { useLocation } from "react-router-dom"
-import { getCards, deleteCard } from "../services/cardService"
+import { getCards, deleteCard, likeCard } from "../services/cardService"
 import Card from "../components/Card"
 
 function Home() {
@@ -26,6 +26,19 @@ function Home() {
     setCards(prev => prev.filter(card=> card._id !== id))
   }
 
+  const handleLike = async (id) => {
+    const updatedCard = await likeCard(id)
+
+    setCards(prev =>
+      prev.map(card =>
+        card._id === id ? updatedCard : card
+      )
+    )
+  }
+
+
+
+
   const indexOfLastCard = currentPage* cardsPerPage
   const indexOfFirstCard = indexOfLastCard - cardsPerPage
 
@@ -42,6 +55,7 @@ function Home() {
                 key={card._id} 
                 card={card}
                 onDelete={handleDelete}
+                onLike={handleLike}
                 />
         ))}
       </div>
