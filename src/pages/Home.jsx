@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import { useLocation } from "react-router-dom"
 import { getCards, deleteCard } from "../services/cardService"
 import Card from "../components/Card"
 
@@ -6,11 +7,18 @@ function Home() {
     const [cards, setCards] = useState([])
     const [currentPage,setCurrentPage] =useState(1)
     const cardsPerPage = 8
+    const location = useLocation()
+
+
     useEffect(() => {
         getCards()
             .then(data => setCards(data))
             .catch(err => console.error(err))
   }, [])
+
+    useEffect(()=> {
+      setCurrentPage(1) 
+    }, [location])
 
   const handleDelete = async (id)=>{
     await deleteCard(id)
@@ -47,7 +55,7 @@ function Home() {
         </button>
 
         <span>Página {currentPage}</span>
-        
+
         <button
           onClick={()=> setCurrentPage(prev=> prev +1)}
           disabled={indexOfLastCard >= cards.length}
