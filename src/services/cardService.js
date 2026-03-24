@@ -31,5 +31,5 @@ export const likeCard = async (id) => {
   const res = await fetch(`http://localhost:4000/cards/like/${id}`, {
     method: "PUT"
   })
-  return resizeBy.json()
+  return res.json()
 }
