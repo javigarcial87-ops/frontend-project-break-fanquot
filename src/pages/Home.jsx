@@ -18,7 +18,10 @@ function Home() {
     setCards(prev => prev.filter(card=> card._id !== id))
   }
 
-  const indexOfLastCard
+  const indexOfLastCard = currentPage* cardsPerPage
+  const indexOfFirstCard = indexOfLastCard - cardsPerPage
+
+  const currentCards = cards.slice(indexOfFirstCard, indexOfLastCard)
 
   return (
     <>
@@ -26,13 +29,31 @@ function Home() {
         <h1>FanQuot</h1>
 
          <div className="cardsContainer">
-            {cards.map((card) => (
+            {currentCards.map((card) => (
              <Card 
                 key={card._id} 
                 card={card}
                 onDelete={handleDelete}
                 />
         ))}
+      </div>
+      
+      <div>
+        <button
+          onClick={()=> setCurrentPage(prev=> prev -1)}
+          disabled={currentPage === 1}
+        >
+          Prev
+        </button>
+
+        <span>Página {currentPage}</span>
+        
+        <button
+          onClick={()=> setCurrentPage(prev=> prev +1)}
+          disabled={indexOfLastCard >= cards.length}
+        >
+          Next
+        </button>
       </div>
     </div>
     </>
