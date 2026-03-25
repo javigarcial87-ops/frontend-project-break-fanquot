@@ -1,7 +1,9 @@
 import { useState } from "react"
 import { loginUser, registerUser } from "../services/authService"
+import { useNavigate } from "react-router-dom"
 
 function Register() {
+    const navigate = useNavigate()
     const [form, setForm] =useState({
         username:"",
         email: "",
@@ -16,6 +18,7 @@ function Register() {
         e.preventDefault()
 
         const user = await registerUser(form)
+        navigate("/")
         console.log(user)
     }
 
