@@ -8,6 +8,7 @@ function Navbar() {
         const storedUser = JSON.parse(localStorage.getItem("user"))
         setUser(storedUser)
     }, [])
+    
     return (
         <>
      <nav>
