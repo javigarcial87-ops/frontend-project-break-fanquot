@@ -12,7 +12,7 @@ export const registerUser = async (userData)=>{
 }
 
 export const loginUser = async (userData) => {
-    const res = await fetch(`${API_URL}/login`, {
+    const res = await fetch("http://localhost:4000/auth/login", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
