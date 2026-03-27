@@ -27,13 +27,14 @@ export const deleteCard = async (id) => {
 }
 
 
-export const likeCard = async (id) => {
+export const likeCard = async (id, userId) => {
   const res = await fetch(`http://localhost:4000/cards/like/${id}`, {
     method: "PUT",
     headers: {
-      "Content-Type":"application/json"
+      "Content-Type": "application/json"
     },
-    body: JSON.stringify({userId})
+    body: JSON.stringify({ userId }) 
   })
+
   return res.json()
 }

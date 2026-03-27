@@ -24,26 +24,30 @@ function Home() {
     setCards(prev => prev.filter(card => card._id !== id))
   }
 
-  const handleLike = async (cardId) => {
-    const user = JSON.parse(localStorage.getItem("user")) 
+const handleLike = async (cardId) => {
+  console.log("CARD ID:", cardId) 
 
-    console.log("USER:", user)
+  const user = JSON.parse(localStorage.getItem("user"))
+  console.log("USER:", user)
 
-    if (!user) {
-      alert("Debes estar logueado")
-      return
-    }
-
-    const updatedCard = await likeCard(cardId, user._id)
-
-    console.log("UPDATED:", updatedCard)
-
-    setCards(prev =>
-      prev.map(card =>
-        card._id === cardId ? updatedCard : card 
-      )
-    )
+  if (!user) {
+    alert("Debes estar logueado")
+    return
   }
+
+  const updatedCard = await likeCard(cardId, user._id)
+
+  if (!updatedCard || updatedCard.error) {
+    console.error("Error en like", updatedCard)
+    return
+  }
+
+  setCards(prev =>
+    prev.map(card =>
+      card._id === cardId ? updatedCard : card
+    )
+  )
+}
 
   const indexOfLastCard = currentPage * cardsPerPage
   const indexOfFirstCard = indexOfLastCard - cardsPerPage

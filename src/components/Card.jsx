@@ -9,10 +9,12 @@ function Card({ card, onDelete, onLike }) {
       <p>"{card.quote}"</p>
 
       <p>❤️{card.likes}</p>
-
+      {card._id && (
       <button onClick={()=> onLike(card._id)}>
         Like
       </button>
+      )}
+      
       
       <button onClick={()=>onDelete(card._id)}>
         Delete
