@@ -17,8 +17,10 @@ function Login() {
         e.preventDefault()
 
         const user = await loginUser(form)
+
         localStorage.setItem("user", JSON.stringify(user))
         navigate("/")
+        window.location.reload()
         console.log(user)
     }
 

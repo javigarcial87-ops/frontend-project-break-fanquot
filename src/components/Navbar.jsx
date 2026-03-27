@@ -1,40 +1,31 @@
-import {Link} from "react-router-dom"
-import { useEffect, useState } from "react"
+import { Link } from "react-router-dom"
 
 function Navbar() {
-    const [user,setUser] = useState(null)
+  const user = JSON.parse(localStorage.getItem("user"))
 
-    useEffect(()=>{
-        const storedUser = JSON.parse(localStorage.getItem("user"))
-        setUser(storedUser)
-    }, [])
-    
-    return (
+  return (
+    <nav>
+      <Link to="/">Home</Link>
+      <Link to="/create">Crear Card</Link>
+
+      {user ? (
         <>
-     <nav>
-  <Link to="/">Home</Link>
-  <Link to="/create">Crear Card</Link>
-
-  {user ? (
-    <>
-      <span>Hola, {user?.username || user?.email}</span>
-      <button onClick={() => {
-        localStorage.removeItem("user")
-        window.location.reload()
-      }}>
-        Logout
-      </button>
-    </>
-  ) : (
-    <>
-      <Link to="/login">Login</Link>
-      <Link to="/register">Register</Link>
-    </>
-  )}
-</nav>
-    </>
-    )
+          <span>Hola, {user?.username || user?.email}</span>
+          <button onClick={() => {
+            localStorage.removeItem("user")
+            window.location.reload()
+          }}>
+            Logout
+          </button>
+        </>
+      ) : (
+        <>
+          <Link to="/login">Login</Link>
+          <Link to="/register">Register</Link>
+        </>
+      )}
+    </nav>
+  )
 }
-
 
 export default Navbar
