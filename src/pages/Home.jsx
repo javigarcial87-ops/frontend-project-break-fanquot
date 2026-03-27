@@ -25,10 +25,10 @@ function Home() {
   }
 
 const handleLike = async (cardId) => {
-  console.log("CARD ID:", cardId) 
+  
 
   const user = JSON.parse(localStorage.getItem("user"))
-  console.log("USER:", user)
+  
 
   if (!user) {
     alert("Debes estar logueado")
@@ -36,11 +36,6 @@ const handleLike = async (cardId) => {
   }
 
   const updatedCard = await likeCard(cardId, user._id)
-
-  if (!updatedCard || updatedCard.error) {
-    console.error("Error en like", updatedCard)
-    return
-  }
 
   setCards(prev =>
     prev.map(card =>

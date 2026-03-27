@@ -27,6 +27,7 @@ function Login() {
     return (
         <>
         <form onSubmit={handleSubmit}>
+            <h2>LOGIN</h2>
             <input name="email" placeholder="Email" onChange={handleChange} />
             <input name="password" placeholder="Password" onChange={handleChange} />
             <button>Login</button>

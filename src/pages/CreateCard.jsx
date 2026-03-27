@@ -1,9 +1,11 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { useNavigate } from "react-router-dom"
 import { createCard } from "../services/cardService"
 
 function CreateCard() {
   const navigate = useNavigate()
+
+
 
   const [form, setForm] = useState({
     characterName: "",
@@ -44,6 +46,16 @@ function CreateCard() {
       console.error("Error al crear card:", error)
     }
   }
+
+
+
+useEffect(()=>{
+  const user = JSON.parse(localStorage.getItem("user"))
+  if (!user) {
+    alert("Debes estar logeado para crear")
+    navigate("/login")
+  }
+},)
 
   return (
     <div>
