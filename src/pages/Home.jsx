@@ -30,7 +30,7 @@ const handleLike = async (cardId) => {
   const user = JSON.parse(localStorage.getItem("user"))
   
 
-  if (!user) {
+  if (!user || !user._id) {
     alert("Debes estar logueado")
     return
   }

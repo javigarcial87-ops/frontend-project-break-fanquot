@@ -26,5 +26,5 @@ export const loginUser = async (userData) => {
         return {error: result.error}
     }
 
-    return res.json()
+    return result
 }
