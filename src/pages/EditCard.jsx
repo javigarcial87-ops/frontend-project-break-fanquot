@@ -44,7 +44,18 @@ function EditCard() {
             <form onSubmit={handleSubmit}>
                 <input name="characterName" value={form.characterName} onChange={handleChange} />
                 <input name="characterImage" value={form.characterImage} onChange={handleChange} />
-                <input name="mediaType" value={form.mediaType} onChange={handleChange} />
+                <select 
+                name="mediaType"
+                value={form.mediaType}
+                onChange={handleChange}
+                >
+                    <option value="">Selecciona el tipo de medio</option>
+                    <option value="cine">CINE</option>
+                    <option value="television">TV</option>
+                    <option value="juegos">JUEGOS</option>
+                    <option value="literatura">LITERATURA</option>
+
+                </select>
                 <input name="mediaTitle" value={form.mediaTitle} onChange={handleChange} />
                 <input name="quote" value={form.quote} onChange={handleChange} />
 
