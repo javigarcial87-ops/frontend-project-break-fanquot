@@ -1,4 +1,7 @@
+import { useNavigate } from "react-router-dom"
+
 function Card({ card, onDelete, onLike }) {
+  const navigate = useNavigate()
   const user = JSON.parse(localStorage.getItem("user"))
 
   return (
@@ -20,6 +23,12 @@ function Card({ card, onDelete, onLike }) {
           Delete
         </button>
       )}
+
+      {user?.role === "admin" && (
+        <button onClick={() => navigate(`/edit/${card._id}`)}>
+          Edit
+        </button>
+)}
     </div>
   )
 }
