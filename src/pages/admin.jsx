@@ -27,7 +27,7 @@ function Admin() {
     //borrar card
     const handleDelete = async (id)=> {
         await deleteCard(id)
-        setCards(prev => prev.filter(csrd => cards._id !==id))
+        setCards(prev => prev.filter(card => card._id !==id))
     }
 
     //filtrar cards para busqueda
