@@ -19,6 +19,11 @@ const handleSubmit = async (e) => {
   try {
     const user = await loginUser(form)
 
+    if (!user || user.error) {
+        alert("Datos incorrectos, intentalo de nuevo")
+        return
+    }
+
     localStorage.setItem("user", JSON.stringify(user))
 
     if (user.role === "admin") {
@@ -30,7 +35,8 @@ const handleSubmit = async (e) => {
     window.location.reload()
 
   } catch (error) {
-    console.error("Error login:", error)
+    alert("Datos incorrectos, intentalo de nuevo")
+    console.error(error)
   }
 } 
 

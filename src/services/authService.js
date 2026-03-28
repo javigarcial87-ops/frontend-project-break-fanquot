@@ -17,8 +17,14 @@ export const loginUser = async (userData) => {
         headers: {
             "Content-Type": "application/json"
         },
-        body:JSON.stringify(userData)
+        body:JSON.stringify(data)
     })
+
+    const result = await res.json()
+
+    if (!res.ok) {
+        return {error: result.error}
+    }
 
     return res.json()
 }
