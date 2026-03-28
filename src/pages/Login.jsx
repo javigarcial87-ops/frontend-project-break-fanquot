@@ -13,16 +13,26 @@ function Login() {
         setForm({...form, [e.target.name]: e.target.value})
     }
 
-    const handleSubmit = async (e) => {
-        e.preventDefault()
+const handleSubmit = async (e) => {
+  e.preventDefault()
 
-        const user = await loginUser(form)
+  try {
+    const user = await loginUser(form)
 
-        localStorage.setItem("user", JSON.stringify(user))
-        navigate("/")
-        window.location.reload()
-        console.log(user)
+    localStorage.setItem("user", JSON.stringify(user))
+
+    if (user.role === "admin") {
+      navigate("/admin")
+    } else {
+      navigate("/")
     }
+
+    window.location.reload()
+
+  } catch (error) {
+    console.error("Error login:", error)
+  }
+} 
 
     return (
         <>

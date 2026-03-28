@@ -25,7 +25,7 @@ function Card({ card, onDelete, onLike }) {
       )}
 
       {user?.role === "admin" && (
-        <button onClick={() => navigate(`/edit/${card._id}`)}>
+        <button onClick={() => navigate("/admin")}>
           Edit
         </button>
 )}
