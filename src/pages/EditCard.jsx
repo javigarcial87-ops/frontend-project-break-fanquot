@@ -16,7 +16,7 @@ function EditCard() {
 
     useEffect(()=> {
         getCards().then(cards => {
-            const card = cards.find(c => c._id === id)
+            const card = cards.find(c => c._id.toString() === id)
             if (card) setForm(card)
         })
     },[id])
@@ -28,7 +28,7 @@ function EditCard() {
         })
     }
 
-    const hadleSubmit = async (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault()
 
         await updateCard(id, form)
