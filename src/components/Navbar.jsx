@@ -10,7 +10,11 @@ function Navbar() {
 
       {user ? (
         <>
-          <span>Hola, {user?.username || user?.email}</span>
+          {user?.username || user?.email ? (
+            <span>Hola, {user?.username || user?.email}</span>
+          ) :null}
+
+
           <button onClick={() => {
             localStorage.removeItem("user")
             window.location.reload()
