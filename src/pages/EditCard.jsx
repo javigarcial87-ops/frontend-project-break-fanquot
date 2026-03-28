@@ -48,6 +48,7 @@ function EditCard() {
                 name="mediaType"
                 value={form.mediaType}
                 onChange={handleChange}
+                required
                 >
                     <option value="">Selecciona el tipo de medio</option>
                     <option value="cine">CINE</option>
