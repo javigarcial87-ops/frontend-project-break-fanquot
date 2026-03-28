@@ -35,6 +35,18 @@ export const likeCard = async (id, userId) => {
     },
     body: JSON.stringify({ userId })
   })
+  return res.json()
+}
+
+
+export const updateCard = async (id, data) => {
+  const res = await fetch(`http://localhost:4000/cards/${id}`, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(data)
+  })
 
   return res.json()
 }

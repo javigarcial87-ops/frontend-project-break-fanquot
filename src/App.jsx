@@ -4,6 +4,8 @@ import CreateCard from "./pages/CreateCard"
 import Navbar from "./components/Navbar"
 import Login from "./pages/Login"
 import Register from "./pages/Register"
+import Admin from "./pages/Admin"
+import EditCard from "./pages/EditCard"
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
         <Route path="/create" element={<CreateCard />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/admin" element={<Admin />} />
+        <Route path="/edit/:id" element={<EditCard />} />
       </Routes>
     </Router>
   )
