@@ -8,7 +8,7 @@ function Card({ card, onDelete, onLike }) {
     <div className="card">
       <h3>{card.characterName}</h3>
       <img src={card.characterImage} alt={card.characterName} />
-      <p>{card.mediaType}</p>
+      <p>{card.mediaType.toUpperCase()}</p>
       <p><strong>{card.mediaTitle}</strong></p>
       <p>"{card.quote}"</p>
 
