@@ -76,12 +76,19 @@ useEffect(()=>{
           onChange={handleChange}
         />
 
-        <input
+        <select 
           name="mediaType"
-          placeholder="Type"
           value={form.mediaType}
           onChange={handleChange}
-        />
+          required
+                >
+              <option value="">Selecciona el tipo de medio</option>
+              <option value="cine">CINE</option>
+              <option value="television">TV</option>
+              <option value="juegos">JUEGOS</option>
+              <option value="literatura">LITERATURA</option>
+
+        </select>
 
         <input
           name="mediaTitle"
