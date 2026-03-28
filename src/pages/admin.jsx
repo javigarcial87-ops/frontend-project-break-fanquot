@@ -35,4 +35,40 @@ function Admin() {
         card.characterName.toLowerCase().includes(search.toLowerCase()) ||
         card.mediaTitle.toLowerCase().includes(search.toLowerCase())
     )
+
+    return (
+        <>
+        <div>
+            <h1>Panel administrador</h1>
+
+            {/*BUSCADOR*/}
+            <input 
+            type="text"
+            placeholder="Busca por nombre de personaje o titulo donde aparece"
+            value={search}
+            onChange={(e)=>setSearch(e.target.value)}
+             />
+
+
+             {/*LISTA*/}
+             {filteredCards.map(card=>(
+                <div key={card._id}>
+                    <h3>{card.characterName}</h3>
+                    <p>{card.mediaTitle}</p>
+
+                    <button onClick={()=>handleDelete(card._id)}>
+                    Borrar card
+                    </button>
+
+                    <button onClick={()=>navigate(`/edit/${card._id}`)}>
+                    Editar card
+                    </button>
+                </div>
+             ))}
+        </div>
+        
+        </>
+    )
 }
+
+export default Admin
