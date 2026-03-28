@@ -18,6 +18,7 @@ const handleSubmit = async (e) => {
 
   try {
     const user = await loginUser(form)
+    console.log("RESPUESTA LOGIN:", user)
 
     if (!user || user.error) {
         alert("Datos incorrectos, intentalo de nuevo")

@@ -11,7 +11,7 @@ export const registerUser = async (userData)=>{
     return res.json()
 }
 
-export const loginUser = async (userData) => {
+export const loginUser = async (data) => {
     const res = await fetch("http://localhost:4000/auth/login", {
         method: "POST",
         headers: {
@@ -19,12 +19,6 @@ export const loginUser = async (userData) => {
         },
         body:JSON.stringify(data)
     })
-
     const result = await res.json()
-
-    if (!res.ok) {
-        return {error: result.error}
-    }
-
     return result
 }
