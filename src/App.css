@@ -199,6 +199,11 @@
   color: white;
 }
 
+.selectMedia{
+  border-radius: 30px;
+  padding: 8px;
+}
+
 
 /*PANEL DE USUARIO*/
 .profileTab{

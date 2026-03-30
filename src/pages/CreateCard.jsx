@@ -83,6 +83,7 @@ useEffect(()=>{
           name="mediaType"
           value={form.mediaType}
           onChange={handleChange}
+          className="selectMedia"
           required
                 >
               <option value="">Selecciona el tipo de medio</option>
