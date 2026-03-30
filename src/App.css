@@ -1,3 +1,4 @@
+/*NAVEGADOR*/
 .navBar {
   display: flex;
   justify-content: center;
@@ -9,13 +10,13 @@
 }
 
 
-
+/*BUSCADOR HOME*/
 .searchHome{
   height: 30px;
   border-radius: 40px;
 }
 
-
+/*DISEÑO CARDS*/
 .cardsContainer {
   display: flex;
   justify-content: center;
@@ -70,6 +71,7 @@
   color: yellow;
 }
 
+/*PAGINACION*/
 .pagination {
   display: flex;
   justify-content: center;
