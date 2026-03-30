@@ -15,7 +15,7 @@ function Navbar() {
       {user ? (
         <>
           {user?.username || user?.email ? (
-            <span>Hola, {user?.username || user?.email}</span>
+            <span className="userName">Hola, {user?.username || user?.email}</span>
           ) :null}
 
 

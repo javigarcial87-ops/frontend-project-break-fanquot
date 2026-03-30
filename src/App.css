@@ -55,3 +55,17 @@
   padding: 8px;
   color: white;
 }
+
+.btnLike{
+  font-weight: bold;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 30px;
+  background:none;
+  padding: 8px;
+  color: white;
+}
+
+.userName{
+  font-weight: bold;
+  color: yellow;
+}
