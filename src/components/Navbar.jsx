@@ -5,6 +5,7 @@ function Navbar() {
 
   return (
     <nav className="navBar">
+      <h1>fanQuot</h1>
       <Link to="/">Home</Link>
       <Link to="/create">Crear Card</Link>
       <Link to="/profile">Mi perfil</Link>

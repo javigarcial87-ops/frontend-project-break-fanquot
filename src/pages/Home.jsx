@@ -59,7 +59,7 @@ const handleLike = async (cardId) => {
 
   return (
     <div>
-      <h1>FanQuot</h1>
+      
 
       <input 
       type="text"
