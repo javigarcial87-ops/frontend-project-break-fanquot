@@ -61,7 +61,7 @@ const handleLike = async (cardId) => {
     <div>
       
 
-      <input 
+      <input className="searchHome"
       type="text"
       placeholder="Buca por personaje o titulo..."
       value={search} 
