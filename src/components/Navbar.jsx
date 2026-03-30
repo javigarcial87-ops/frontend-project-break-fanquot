@@ -4,7 +4,7 @@ function Navbar() {
   const user = JSON.parse(localStorage.getItem("user"))
 
   return (
-    <nav>
+    <nav className="navBar">
       <Link to="/">Home</Link>
       <Link to="/create">Crear Card</Link>
 
