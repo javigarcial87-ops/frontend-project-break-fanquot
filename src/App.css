@@ -66,6 +66,7 @@
   color: white;
 }
 
+/*SALUDO USUARIO LOGEADO*/
 .userName{
   font-weight: bold;
   color: yellow;
@@ -74,6 +75,44 @@
 /*PAGINACION*/
 .pagination {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+/*FORMULARIO DE LOGIN*/
+.loginForm{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin: 20px 0;
+}
+/*FORMULARIO DE REGISTRO*/
+.registerForm{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin: 20px 0;
+}
+/*PANEL ADMINISTRADOR*/
+.adminPanel{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+/*FORMULARIO DE CREACION*/
+.createForm{
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 20px;

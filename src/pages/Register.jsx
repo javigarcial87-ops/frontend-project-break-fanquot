@@ -24,13 +24,13 @@ function Register() {
 
     return (
         <>
-        <h1>Registrate</h1>
-        <form onSubmit={handleSubmit} className="registerForm">
-            <input name="username" placeholder="Username" onChange={handleChange} />
-            <input name="email" placeholder="Email" onChange={handleChange} />
-            <input name="password" placeholder="Password" onChange={handleChange} />
-            <button>Registrarse</button>
-        </form>
+                <form onSubmit={handleSubmit} className="registerForm">
+                    <h2>REGISTRATE</h2>
+                    <input name="username" placeholder="Username" onChange={handleChange} />
+                    <input name="email" placeholder="Email" onChange={handleChange} />
+                    <input name="password" placeholder="Password" onChange={handleChange} />
+                    <button>Registrarse</button>
+                </form>
         </>
     )
 }

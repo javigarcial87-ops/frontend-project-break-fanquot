@@ -59,9 +59,12 @@ useEffect(()=>{
 
   return (
     <div>
-      <h2>Crea una nueva card</h2>
+      
 
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="createForm">
+
+        <h2>Crea una nueva card</h2>
+
         <input
           name="characterName"
           placeholder="Personaje"
