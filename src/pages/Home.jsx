@@ -8,6 +8,7 @@ function Home() {
   const [currentPage, setCurrentPage] = useState(1)
   const cardsPerPage = 8
   const location = useLocation() 
+  const [search, setSearch] = useState("")
 
   useEffect(() => {
     getCards()
@@ -50,13 +51,25 @@ const handleLike = async (cardId) => {
   const indexOfLastCard = currentPage * cardsPerPage
   const indexOfFirstCard = indexOfLastCard - cardsPerPage
   const currentCards = cards.slice(indexOfFirstCard, indexOfLastCard)
+  const filteredCards =cards.filter(card =>
+    card.characterName.toLowerCase().includes(search.toLowerCase()) ||
+    card.mediaTitle.toLowerCase().includes(search.toLowerCase())
+  )
+
 
   return (
     <div>
       <h1>FanQuot</h1>
 
+      <input 
+      type="text"
+      placeholder="Buca por personaje o titulo..."
+      value={search} 
+      onChange={(e) => setSearch(e.target.value)}
+      />
+
       <div className="cardsContainer">
-        {currentCards.map((card) => (
+        {(search ? filteredCards : currentCards).map((card) => (
           <Card
             key={card._id}
             card={card}
