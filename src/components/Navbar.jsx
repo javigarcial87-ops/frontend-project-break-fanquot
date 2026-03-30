@@ -7,7 +7,7 @@ function Navbar() {
     <nav className="navBar">
       <Link to="/">Home</Link>
       <Link to="/create">Crear Card</Link>
-
+      <Link to="/profile">Mi perfil</Link>
       {user ? (
         <>
           {user?.username || user?.email ? (
@@ -26,6 +26,7 @@ function Navbar() {
         <>
           <Link to="/login">Login</Link>
           <Link to="/register">Register</Link>
+          
         </>
       )}
     </nav>

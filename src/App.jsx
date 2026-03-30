@@ -6,6 +6,7 @@ import Login from "./pages/Login"
 import Register from "./pages/Register"
 import Admin from "./pages/Admin"
 import EditCard from "./pages/EditCard"
+import Profile from "./pages/Profile"
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/admin" element={<Admin />} />
         <Route path="/edit/:id" element={<EditCard />} />
+        <Route path="/profile" element={<Profile />} />
       </Routes>
     </Router>
   )
