@@ -26,7 +26,7 @@ function Register() {
         <>
                 <form onSubmit={handleSubmit} className="registerForm">
                     <h2>REGISTRATE</h2>
-                    <input name="username" placeholder="Username" onChange={handleChange} />
+                    <input name="username" placeholder="Nombre de Usuario" onChange={handleChange} />
                     <input name="email" placeholder="Email" onChange={handleChange} />
                     <input name="password" placeholder="Password" onChange={handleChange} />
                     <button className="btnRegist">Registrarse</button>

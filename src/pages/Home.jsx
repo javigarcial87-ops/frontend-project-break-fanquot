@@ -66,7 +66,7 @@ const handleLike = async (cardId) => {
 
       <input className="searchHome"
       type="text"
-      placeholder="Buca por personaje o titulo..."
+      placeholder="Busca por personaje o titulo..."
       value={search} 
       onChange={(e) => setSearch(e.target.value)}
       />
