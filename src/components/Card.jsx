@@ -12,10 +12,10 @@ function Card({ card, onDelete, onLike, showLikeButton=true }) {
       <p><strong>{card.mediaTitle}</strong></p>
       <p>"{card.quote}"</p>
 
-      <p>❤️ {card.likes || 0}</p>
+      <p className="counterLike">❤️ {card.likes || 0}</p>
 
       {showLikeButton && (
-        <button onClick={() => onLike(card._id)}>
+        <button onClick={() => onLike(card._id)} className="buttonLike">
         Like
         </button>
       )}
