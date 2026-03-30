@@ -203,7 +203,12 @@
   border-radius: 30px;
   padding: 8px;
 }
-
+.quoteArea{
+  border-radius: 30px;
+  background-color: rgb(255, 255, 255);
+  font-weight: bold;
+  padding: 20px;
+}
 
 /*PANEL DE USUARIO*/
 .profileTab{

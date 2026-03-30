@@ -101,12 +101,12 @@ useEffect(()=>{
           onChange={handleChange}
         />
 
-      
+        <label>Introduce aqui la frase del personaje</label>
         <textarea 
           name="quote"
-          placeholder="cita..."
           value={form.quote}
           onChange={handleChange}
+          className="quoteArea"
         >
 
       </textarea>
