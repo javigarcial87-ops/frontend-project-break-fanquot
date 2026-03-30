@@ -29,7 +29,7 @@ function Register() {
                     <input name="username" placeholder="Username" onChange={handleChange} />
                     <input name="email" placeholder="Email" onChange={handleChange} />
                     <input name="password" placeholder="Password" onChange={handleChange} />
-                    <button>Registrarse</button>
+                    <button className="btnRegist">Registrarse</button>
                 </form>
         </>
     )
