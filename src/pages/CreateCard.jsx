@@ -88,7 +88,7 @@ useEffect(()=>{
                 >
               <option value="">Selecciona el tipo de medio</option>
               <option value="cine">MOVIE</option>
-              <option value="television">TV</option>
+              <option value="tv">TV</option>
               <option value="juegos">GAMING</option>
               <option value="literatura">BOOK</option>
 
@@ -101,7 +101,7 @@ useEffect(()=>{
           onChange={handleChange}
         />
 
-        <label>Introduce aqui la frase del personaje</label>
+        <label>Introduce aquí la frase del personaje</label>
         <textarea 
           name="quote"
           value={form.quote}

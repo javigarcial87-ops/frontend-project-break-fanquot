@@ -16,7 +16,7 @@ function Card({ card, onDelete, onLike, showLikeButton=true }) {
 
       {showLikeButton && (
         <button onClick={() => onLike(card._id)} className="btnLike">
-        Me gusta!
+        Me gusta
         </button>
       )}
       
