@@ -52,7 +52,7 @@ function CreateCard() {
 useEffect(()=>{
   const user = JSON.parse(localStorage.getItem("user"))
   if (!user) {
-    alert("Debes estar logeado para crear")
+    alert("Debes estar registrado y logeado para crear nuevas entradas")
     navigate("/login")
   }
 },)

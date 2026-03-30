@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { useLocation } from "react-router-dom"
 import { getCards, deleteCard, likeCard } from "../services/cardService"
 import Card from "../components/Card"
+import { useNavigate } from "react-router-dom"
 
 function Home() {
   const [cards, setCards] = useState([])
@@ -9,6 +10,7 @@ function Home() {
   const cardsPerPage = 8
   const location = useLocation() 
   const [search, setSearch] = useState("")
+  const navigate = useNavigate()
 
   useEffect(() => {
     getCards()
@@ -30,7 +32,8 @@ const handleLike = async (cardId) => {
   
 
   if (!user || !user._id) {
-    alert("Debes estar logueado")
+    alert("Debes estar registrado y logueado para dar LIKE")
+    navigate("/login")
     return
   }
 
@@ -79,7 +82,7 @@ const handleLike = async (cardId) => {
         ))}
       </div>
 
-      <div>
+      <div className="pagination">
         <button
           onClick={() => setCurrentPage(prev => prev - 1)}
           disabled={currentPage === 1}

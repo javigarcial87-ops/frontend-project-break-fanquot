@@ -4,11 +4,14 @@ function Navbar() {
   const user = JSON.parse(localStorage.getItem("user"))
 
   return (
+    <>
     <nav className="navBar">
       <h1>fanQuot</h1>
       <Link to="/">Home</Link>
       <Link to="/create">Crear Card</Link>
       <Link to="/profile">Mi perfil</Link>
+
+  
       {user ? (
         <>
           {user?.username || user?.email ? (
@@ -31,6 +34,7 @@ function Navbar() {
         </>
       )}
     </nav>
+    </>
   )
 }
 

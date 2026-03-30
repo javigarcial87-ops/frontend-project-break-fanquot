@@ -38,7 +38,7 @@ function EditCard() {
 
     return (
         <>
-    <div>
+    <div className="editForm">
             <h2>Editar Card</h2>
 
             <form onSubmit={handleSubmit}>

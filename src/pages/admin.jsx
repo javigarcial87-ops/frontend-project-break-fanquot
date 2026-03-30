@@ -38,10 +38,10 @@ function Admin() {
 
     return (
         <>
-        <div>
+        <div className="adminPanel">
             <h1>Panel administrador</h1>
 
-            {/*BUSCADOR*/}
+            
             <input 
             type="text"
             placeholder="Busca por nombre de personaje o titulo donde aparece"
@@ -50,7 +50,7 @@ function Admin() {
              />
 
 
-             {/*LISTA*/}
+             
              {filteredCards.map(card=>(
                 <div key={card._id}>
                     <h3>{card.characterName}</h3>
