@@ -50,18 +50,18 @@ function Admin() {
             className="searchInput"
              />
 
-
+            
              
              {filteredCards.map(card=>(
-                <div key={card._id}>
+                <div key={card._id} className="adminSearch">
                     <h3>{card.characterName}</h3>
                     <p>{card.mediaTitle}</p>
 
-                    <button onClick={()=>handleDelete(card._id)}>
+                    <button onClick={()=>handleDelete(card._id)} className="btnDlt">
                     Borrar card
                     </button>
 
-                    <button onClick={()=>navigate(`/edit/${card._id}`)}>
+                    <button onClick={()=>navigate(`/edit/${card._id}`)} className="btnEdit">
                     Editar card
                     </button>
                 </div>

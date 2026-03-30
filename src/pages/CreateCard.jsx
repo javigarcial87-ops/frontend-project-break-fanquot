@@ -109,7 +109,7 @@ useEffect(()=>{
         >
 
       </textarea>
-        <button type="submit">Crear Card</button>
+        <button type="submit" className="btnCreateCard">Crear Card</button>
       </form>
     </div>
   )

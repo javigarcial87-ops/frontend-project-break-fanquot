@@ -22,14 +22,14 @@ function Card({ card, onDelete, onLike, showLikeButton=true }) {
       
 
       {user?.role === "admin" && (
-        <button onClick={() => onDelete(card._id)}>
-          Delete
+        <button onClick={() => onDelete(card._id)} className="btnDltAdmin">
+          Eliminar
         </button>
       )}
 
       {user?.role === "admin" && (
-        <button onClick={() => navigate("/admin")}>
-          Edit
+        <button onClick={() => navigate("/admin")} className="btnEditAdmin">
+          Editar
         </button>
 )}
     </div>
