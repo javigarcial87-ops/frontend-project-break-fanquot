@@ -69,3 +69,11 @@
   font-weight: bold;
   color: yellow;
 }
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin: 20px 0;
+}

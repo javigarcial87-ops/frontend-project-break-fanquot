@@ -87,7 +87,7 @@ const handleLike = async (cardId) => {
           onClick={() => setCurrentPage(prev => prev - 1)}
           disabled={currentPage === 1}
         >
-          Prev
+          {"<"}
         </button>
 
         <span>Página {currentPage}</span>
@@ -96,7 +96,7 @@ const handleLike = async (cardId) => {
           onClick={() => setCurrentPage(prev => prev + 1)}
           disabled={indexOfLastCard >= cards.length}
         >
-          Next
+         {">"}
         </button>
       </div>
     </div>
