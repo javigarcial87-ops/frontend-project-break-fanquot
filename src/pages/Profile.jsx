@@ -1,11 +1,14 @@
 import { useEffect, useState} from "react"
 import {getCards} from "../services/cardService"
 import Card from "../components/Card"
+import { useNavigate } from "react-router-dom"
+
 
 function Profile() {
     const [cards, setCards] = useState([])
     const [likedCards, setLikedCards] = useState([])
-
+    const navigate = useNavigate()
+     
     const user = JSON.parse(localStorage.getItem("user"))
 
     useEffect(()=> {
@@ -21,9 +24,16 @@ function Profile() {
         .catch(err => console.error(err))
     },[])
 
-    if(!user) {
-        return <p>Debes estar logeado</p>
-    }
+    
+    useEffect(()=> {
+      const user = JSON.parse(localStorage.getItem("user"))
+
+      if (!user) {
+        alert("debes estar logeado")
+        navigate("/login")
+      }
+    },[])
+
 
     return (
     <div className="profileTab">
