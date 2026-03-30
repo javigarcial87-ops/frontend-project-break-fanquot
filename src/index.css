@@ -1,20 +1,37 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
 body {
   font-family: Arial, sans-serif;
-  padding: 20px;
+  background-color: #121212;
+  color: #ffffff;
 }
 
-.cardsContainer {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 16px;
+
+img {
+  max-width: 100%;
+  display: block;
 }
 
-.card {
-  border: 1px solid #ccc;
-  padding: 10px;
-  border-radius: 8px;
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
-.card img {
-  width: 100%;
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+/* INPUTS */
+input, select, textarea {
+  font-family: inherit;
+  outline: none;
 }

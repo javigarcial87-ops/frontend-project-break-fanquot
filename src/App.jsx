@@ -8,6 +8,7 @@ import Admin from "./pages/Admin"
 import EditCard from "./pages/EditCard"
 import Profile from "./pages/Profile"
 
+
 function App() {
   return (
     <Router>
