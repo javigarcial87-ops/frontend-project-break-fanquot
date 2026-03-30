@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom"
 
-function Card({ card, onDelete, onLike }) {
+function Card({ card, onDelete, onLike, showLikeButton=true }) {
   const navigate = useNavigate()
   const user = JSON.parse(localStorage.getItem("user"))
 
@@ -14,9 +14,12 @@ function Card({ card, onDelete, onLike }) {
 
       <p>❤️ {card.likes || 0}</p>
 
-      <button onClick={() => onLike(card._id)}>
+      {showLikeButton && (
+        <button onClick={() => onLike(card._id)}>
         Like
-      </button>
+        </button>
+      )}
+      
 
       {user?.role === "admin" && (
         <button onClick={() => onDelete(card._id)}>

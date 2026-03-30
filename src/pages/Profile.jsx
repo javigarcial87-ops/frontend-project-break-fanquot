@@ -36,7 +36,7 @@ function Profile() {
       ) : (
         <div className="cardsContainer">
           {likedCards.map(card => (
-            <Card key={card._id} card={card} />
+            <Card key={card._id} card={card} showLikeButton={false} />
           ))}
         </div>
       )}

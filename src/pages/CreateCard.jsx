@@ -64,14 +64,14 @@ useEffect(()=>{
       <form onSubmit={handleSubmit}>
         <input
           name="characterName"
-          placeholder="Character"
+          placeholder="Personaje"
           value={form.characterName}
           onChange={handleChange}
         />
 
         <input
           name="characterImage"
-          placeholder="Image URL"
+          placeholder="URL de la imagen del personaje"
           value={form.characterImage}
           onChange={handleChange}
         />
@@ -92,18 +92,20 @@ useEffect(()=>{
 
         <input
           name="mediaTitle"
-          placeholder="Title"
+          placeholder="Título del medio"
           value={form.mediaTitle}
           onChange={handleChange}
         />
 
-        <input
+      
+        <textarea 
           name="quote"
-          placeholder="Quote"
+          placeholder="cita..."
           value={form.quote}
           onChange={handleChange}
-        />
+        >
 
+      </textarea>
         <button type="submit">Crear Card</button>
       </form>
     </div>
