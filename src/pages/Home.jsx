@@ -61,7 +61,7 @@ const handleLike = async (cardId) => {
 
 
   return (
-    <div>
+    <div className="searchHomeContainer">
       
 
       <input className="searchHome"

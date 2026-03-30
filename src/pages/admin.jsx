@@ -47,7 +47,7 @@ function Admin() {
             placeholder="Busca por nombre de personaje o titulo donde aparece"
             value={search}
             onChange={(e)=>setSearch(e.target.value)}
-            
+            className="searchInput"
              />
 
 
