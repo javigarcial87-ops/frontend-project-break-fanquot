@@ -22,7 +22,7 @@ function Navbar() {
           <button onClick={() => {
             localStorage.removeItem("user")
             window.location.reload()
-          }}>
+          }} className="btnLogout">
             Logout
           </button>
         </>

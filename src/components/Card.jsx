@@ -15,7 +15,7 @@ function Card({ card, onDelete, onLike, showLikeButton=true }) {
       <p className="counterLike">❤️ {card.likes || 0}</p>
 
       {showLikeButton && (
-        <button onClick={() => onLike(card._id)} className="buttonLike">
+        <button onClick={() => onLike(card._id)} className="btnLike">
         Like
         </button>
       )}

@@ -26,7 +26,7 @@ function Profile() {
     }
 
     return (
-    <div>
+    <div className="profileTab">
       <h1>Mi perfil</h1>
 
       <h2>Cards que te gustan</h2>
