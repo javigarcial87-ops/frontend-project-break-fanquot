@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import Home from "./pages/Home"
 import CreateCard from "./pages/CreateCard"
 import Navbar from "./components/Navbar"
+import Footer from "./components/Footer";
 import Login from "./pages/Login"
 import Register from "./pages/Register"
 import Admin from "./pages/Admin"
@@ -22,7 +23,9 @@ function App() {
         <Route path="/admin" element={<Admin />} />
         <Route path="/edit/:id" element={<EditCard />} />
         <Route path="/profile" element={<Profile />} />
+        
       </Routes>
+      <Footer />
     </Router>
   )
 }

@@ -1,5 +1,8 @@
 /*NAVEGADOR*/
 .navBar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -7,6 +10,11 @@
   gap: 100px;
   height: 60px;
   font-weight: bold;
+}
+.imgLogo{
+  width: 180px;
+  filter: invert();
+  
 }
 
 
@@ -18,6 +26,7 @@
 }
 .searchHome{
   padding: 30px;
+  width: 600px;
   height: 15px;
   border: 1px solid rgb(255, 255, 255);
   border-radius: 40px;
@@ -44,12 +53,12 @@
 .card {
   flex:1 1 250px;
   max-width: 300px;
-  /* height: 500px; */
+  height: 500px;
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  border: 1px solid #ccc;
-  background: rgb(43, 43, 43);
+  /* border: 1px solid #ccc; */
+  background: rgb(19, 19, 19);
   padding: 10px;
   border-radius: 8px;
   padding: 20px;
@@ -59,7 +68,7 @@
   width: 100%;
   height: 160px;
   margin-top: 20px;
-  box-shadow: 1px 1px 30px 1px rgba(244, 247, 231, 0.295);
+  box-shadow: 1px 1px 30px 1px rgba(244, 247, 231, 0.349);
   border-radius: 50px;
   object-fit: cover;
   object-position: 50% 30%
@@ -67,6 +76,9 @@
 }
 .mediaCard{
   margin-top: 40px;
+  font-size: small;
+
+
 }
 .titleMediaCard{
   margin-top: 10px;
@@ -74,6 +86,7 @@
 
 .quoteCard{
   margin-top: 12px;
+  font-style: italic;
 }
 .counterLike{
   margin-top: auto;
@@ -232,6 +245,7 @@
 }
 /*FORMULARIO DE CREACION*/
 .createForm{
+  height: 700px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -289,4 +303,14 @@
   align-items: center;
   gap: 20px;
   margin: 20px 0;
+}
+.footer{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+ 
+  font-size: 8pt;
+  height: 40px;
+  color: beige;
+  background-color: rgb(150, 94, 214);
 }
