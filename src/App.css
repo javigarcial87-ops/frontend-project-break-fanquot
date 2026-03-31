@@ -21,7 +21,7 @@
   height: 15px;
   border: 1px solid rgb(255, 255, 255);
   border-radius: 40px;
-  background-color: black;
+  background: none;
   color: white;
 }
 /*BUSCADOR ADMIN PANEL*/
@@ -44,7 +44,7 @@
 .card {
   flex:1 1 250px;
   max-width: 300px;
-  height: 400px;
+  /* height: 500px; */
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -58,12 +58,27 @@
 .card img {
   width: 100%;
   height: 160px;
+  margin-top: 20px;
   box-shadow: 1px 1px 30px 1px rgba(244, 247, 231, 0.295);
   border-radius: 50px;
   object-fit: cover;
   object-position: 50% 30%
   
 }
+.mediaCard{
+  margin-top: 40px;
+}
+.titleMediaCard{
+  margin-top: 10px;
+}
+
+.quoteCard{
+  margin-top: 12px;
+}
+.counterLike{
+  margin-top: auto;
+}
+
 /*------------------------------------------------------------------------------------------------*/
 .btnLogin{
   border: 1px solid rgb(255, 255, 255);
@@ -183,6 +198,11 @@
 }
 
 /*FORMULARIO DE EDICION*/
+.labelEditForm{
+  font-weight: bold;
+}
+
+
 .editForm{
   display: flex;
   flex-direction: column;
@@ -191,7 +211,9 @@
   gap: 20px;
   margin: 20px 0;
 }
-.editForm, textarea{
+.editQuote{
+  width: 300px;
+  height: 200px;
   border-radius: 30px;
   background:none;
   color: white;

@@ -8,9 +8,9 @@ function Card({ card, onDelete, onLike, showLikeButton=true }) {
     <div className="card">
       <h3>{card.characterName}</h3>
       <img src={card.characterImage} alt={card.characterName} />
-      <p>{card.mediaType?.toUpperCase() || "SIN TIPO"}</p>
-      <p><strong>{card.mediaTitle}</strong></p>
-      <p>"{card.quote}"</p>
+      <p className="mediaCard">{card.mediaType?.toUpperCase() || "SIN TIPO"}</p>
+      <p className="titleMediaCard"><strong>{card.mediaTitle}</strong></p>
+      <p className="quoteCard">"{card.quote}"</p>
 
       <p className="counterLike">❤️ {card.likes || 0}</p>
 

@@ -55,6 +55,7 @@ function EditCard() {
                 name="mediaType"
                 value={form.mediaType}
                 onChange={handleChange}
+                className="selectMedia"
                 required
                 >
                     <option value="">Selecciona el tipo de medio</option>
@@ -69,7 +70,7 @@ function EditCard() {
                 <input name="mediaTitle" value={form.mediaTitle} onChange={handleChange} required />
 
                 <label className="labelEditForm">Cita</label>
-                <textarea name="quote" value={form.quote} onChange={handleChange} className="EditQuote" required></textarea>
+                <textarea name="quote" value={form.quote} onChange={handleChange} className="editQuote" required></textarea>
                 <button type="submit" className="btnSave">Guardar Cambios</button>
             </form>
 
