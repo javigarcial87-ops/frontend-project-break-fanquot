@@ -38,12 +38,19 @@ function EditCard() {
 
     return (
         <>
-    <div className="editForm">
-            <h2>Editar Card</h2>
+    <div>
+            
 
-            <form onSubmit={handleSubmit}>
-                <input name="characterName" value={form.characterName} onChange={handleChange} />
-                <input name="characterImage" value={form.characterImage} onChange={handleChange} />
+            <form onSubmit={handleSubmit} className="editForm">
+                <h2>Editar Card</h2>
+
+                <label className="labelEditForm">Nombre del personaje</label>
+                <input name="characterName" value={form.characterName} onChange={handleChange} required/>
+
+                <label className="labelEditForm">Imagen</label>
+                <input name="characterImage" value={form.characterImage} onChange={handleChange} required/>
+
+                <label className="labelEditForm">tipo de medio</label>
                 <select 
                 name="mediaType"
                 value={form.mediaType}
@@ -57,10 +64,13 @@ function EditCard() {
                     <option value="literatura">LITERATURA</option>
 
                 </select>
-                <input name="mediaTitle" value={form.mediaTitle} onChange={handleChange} />
-                <input name="quote" value={form.quote} onChange={handleChange} />
 
-                <button type="submit">Guardar</button>
+                <label className="labelEditForm">Nombre del medio</label>
+                <input name="mediaTitle" value={form.mediaTitle} onChange={handleChange} required />
+
+                <label className="labelEditForm">Cita</label>
+                <textarea name="quote" value={form.quote} onChange={handleChange} className="EditQuote" required></textarea>
+                <button type="submit" className="btnSave">Guardar Cambios</button>
             </form>
 
     </div>

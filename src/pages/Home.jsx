@@ -61,15 +61,18 @@ const handleLike = async (cardId) => {
 
 
   return (
-    <div className="searchHomeContainer">
+    <div>
       
-
-      <input className="searchHome"
-      type="text"
-      placeholder="Busca por personaje o titulo..."
-      value={search} 
-      onChange={(e) => setSearch(e.target.value)}
-      />
+      <div className="searchHomeContainer">
+        <input 
+        className="searchHome"
+        type="text"
+        placeholder="Busca por personaje o titulo..."
+        value={search} 
+        onChange={(e) => setSearch(e.target.value)}
+        />
+      </div>
+      
 
       <div className="cardsContainer">
         {(search ? filteredCards : currentCards).map((card) => (
