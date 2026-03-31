@@ -13,8 +13,10 @@ import Profile from "./pages/Profile"
 function App() {
   return (
     <Router>
-      <Navbar />
 
+      <div className="appContainer">
+      <Navbar />
+      <div className="mainContent">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/create" element={<CreateCard />} />
@@ -23,9 +25,11 @@ function App() {
         <Route path="/admin" element={<Admin />} />
         <Route path="/edit/:id" element={<EditCard />} />
         <Route path="/profile" element={<Profile />} />
-        
       </Routes>
+      </div>
+      
       <Footer />
+      </div>
     </Router>
   )
 }

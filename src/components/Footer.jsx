@@ -2,7 +2,7 @@ function Footer() {
     return(
         <footer className="footer">
         <p>© 2026 fanQuot</p>
-        <p>Proyecto FullStack</p>
+        <p> Javier García Álvarez Proyect-break FullStack</p>
         </footer>
     )
     

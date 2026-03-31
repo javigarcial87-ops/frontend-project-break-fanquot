@@ -7,7 +7,7 @@ function Navbar() {
     <>
     <nav className="navBar">
       <img src="public/iconos_SVG/LOGO-fanquot-bueno.png" alt="LOGO" className="imgLogo"/>
-      <Link to="/">Home</Link>
+      <Link to="/"><img src="public/iconos_SVG/home.svg" alt="home" className="iconHome" /></Link>
       <Link to="/create">Crear Card</Link>
       <Link to="/profile">Mi perfil</Link>
 
@@ -23,7 +23,7 @@ function Navbar() {
             localStorage.removeItem("user")
             window.location.reload()
           }} className="btnLogout">
-            Logout
+            <img src="public/iconos_SVG/log-out.svg" alt="logout" className="iconLogout"/>
           </button>
         </>
       ) : (
