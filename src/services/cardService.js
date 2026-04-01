@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:4000/cards"
+const API_URL = "https://backend-project-break-fanquot.onrender.com/cards"
 
 
 export const getCards = async () => {
