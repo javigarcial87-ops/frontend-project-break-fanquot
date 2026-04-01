@@ -64,12 +64,13 @@ const handleLike = async (cardId) => {
 
 
   return (
-  <div className="Layout">
-    <aside className="sideBar">
-          <h2 className="toptitle">DESTACADO</h2>
+  <div >
+    <div className="sideBar">
+          
 
           {topCard && (
             <div>
+              <h2 className="topTitle">DESTACADO</h2>
               <div className="sideTopCard">
                 <h3>{topCard.characterName}</h3>
                 <img src={topCard.characterImage} />
@@ -80,7 +81,7 @@ const handleLike = async (cardId) => {
 
             </div>
           )}
-      </aside>
+      </div>
     <div className="mainContent">
 
         <div className="searchHomeContainer">
