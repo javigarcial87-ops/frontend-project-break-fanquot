@@ -7,7 +7,7 @@ function Navbar() {
     <>
     <nav className="navBar">
       <img src="" alt="LOGO" className="imgLogo"/>
-      <Link to="/LOGO-fanquot-bueno.svg"><img src="public/iconos_SVG/home.svg" alt="home" className="iconHome" /></Link>
+      <Link to="/LOGO-fanquot-bueno.png"><img src="public/iconos_SVG/home.svg" alt="home" className="iconHome" /></Link>
       <Link to="/create">Crear Card</Link>
       <Link to="/profile">Mi perfil</Link>
 
