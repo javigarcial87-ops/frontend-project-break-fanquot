@@ -7,7 +7,7 @@ function Admin() {
     const [search, setSearch] = useState("")
     const navigate = useNavigate()
 
-    //proteger la ruta
+   
     useEffect(()=>{
         const user = JSON.parse(localStorage.getItem("user"))
 
@@ -17,20 +17,20 @@ function Admin() {
         }
     },[])
 
-    //cargar las cards
+    
     useEffect(()=>{
         getCards()
         .then(data => setCards(data))
         .catch(err => console.error(err))
     },[])
 
-    //borrar card
+    
     const handleDelete = async (id)=> {
         await deleteCard(id)
         setCards(prev => prev.filter(card => card._id !==id))
     }
 
-    //filtrar cards para busqueda
+    
     const filteredCards = cards.filter(card=>
         card.characterName.toLowerCase().includes(search.toLowerCase()) ||
         card.mediaTitle.toLowerCase().includes(search.toLowerCase())

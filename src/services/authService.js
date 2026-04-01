@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:4000/auth"
+const API_URL = "https://backend-project-break-fanquot.onrender.com/auth"
 
 export const registerUser = async (userData)=>{
     const res = await fetch(`${API_URL}/register`, {
@@ -12,7 +12,7 @@ export const registerUser = async (userData)=>{
 }
 
 export const loginUser = async (data) => {
-    const res = await fetch("http://localhost:4000/auth/login", {
+    const res = await fetch("https://backend-project-break-fanquot.onrender.com/auth/login", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
