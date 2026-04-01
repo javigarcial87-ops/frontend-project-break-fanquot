@@ -11,6 +11,9 @@ function Home() {
   const location = useLocation() 
   const [search, setSearch] = useState("")
   const navigate = useNavigate()
+  const topCard =[...cards].sort((a,b)=> b.likes - a.likes)[0]
+
+
 
   useEffect(() => {
     getCards()
@@ -61,9 +64,26 @@ const handleLike = async (cardId) => {
 
 
   return (
-    <div>
-      
-      <div className="searchHomeContainer">
+  <div className="Layout">
+    <aside className="sideBar">
+          <h2 className="toptitle">DESTACADO</h2>
+
+          {topCard && (
+            <div>
+              <div className="sideTopCard">
+                <h3>{topCard.characterName}</h3>
+                <img src={topCard.characterImage} />
+                <p>{topCard.mediaTitle}</p>
+                <p>"{topCard.quote}"</p>
+                <p>❤️ {topCard.likes}</p>
+              </div>
+
+            </div>
+          )}
+      </aside>
+    <div className="mainContent">
+
+        <div className="searchHomeContainer">
         <input 
         className="searchHome"
         type="text"
@@ -102,7 +122,13 @@ const handleLike = async (cardId) => {
          {">"}
         </button>
       </div>
-    </div>
+      
+    </div>  
+    
+      
+
+
+  </div>
   )
 }
 
