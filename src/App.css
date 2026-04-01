@@ -61,6 +61,13 @@
   padding: 10px;
   border-radius: 8px;
   padding: 20px;
+  margin-top: 20px;
+  transition: 0.3s ease-in-out;
+}
+
+.card:hover{
+  transform: scale(1.1);
+  background: rgb(0, 0, 0);
 }
 
 .card img {
@@ -77,7 +84,7 @@
 
 .card img:hover{
   border-radius: 0px;
-  box-shadow: 1px 1px 30px 1px rgba(150, 94, 214, 0.336);
+  box-shadow: 1px 1px 30px 1px rgb(197, 171, 226);
 }
 .mediaCard{
   margin-top: 40px;
