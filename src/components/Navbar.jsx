@@ -23,7 +23,7 @@ function Navbar() {
             localStorage.removeItem("user")
             window.location.reload()
           }} className="btnLogout">
-            <img src="public/iconos_SVG/log-out.svg" alt="logout" className="iconLogout"/>
+            <img src="/log-out.svg" alt="logout" className="iconLogout"/>
           </button>
         </>
       ) : (
