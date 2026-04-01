@@ -39,7 +39,7 @@ function Profile() {
     <div className="profileTab">
       <h1>Mi perfil</h1>
 
-      <h2>Las cards que te gustan</h2>
+      <h2>Las cards que me gustan</h2>
 
       {likedCards.length === 0 ? (
         <p>No has dado like a ninguna card aún</p>

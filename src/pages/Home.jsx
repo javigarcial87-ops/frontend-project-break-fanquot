@@ -110,6 +110,7 @@ const handleLike = async (cardId) => {
         <button
           onClick={() => setCurrentPage(prev => prev - 1)}
           disabled={currentPage === 1}
+          className="prevNextBtn"
         >
           {"<"}
         </button>
@@ -119,6 +120,7 @@ const handleLike = async (cardId) => {
         <button
           onClick={() => setCurrentPage(prev => prev + 1)}
           disabled={indexOfLastCard >= cards.length}
+          className="prevNextBtn"
         >
          {">"}
         </button>
