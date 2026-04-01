@@ -28,7 +28,7 @@ export const deleteCard = async (id) => {
 
 
 export const likeCard = async (id, userId) => {
-  const res = await fetch(`http://localhost:4000/cards/like/${id}`, {
+  const res = await fetch(`https://backend-project-break-fanquot.onrender.com/cards/like/${id}`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json"
@@ -40,7 +40,7 @@ export const likeCard = async (id, userId) => {
 
 
 export const updateCard = async (id, data) => {
-  const res = await fetch(`http://localhost:4000/cards/${id}`, {
+  const res = await fetch(`https://backend-project-break-fanquot.onrender.com/cards/${id}`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json"
