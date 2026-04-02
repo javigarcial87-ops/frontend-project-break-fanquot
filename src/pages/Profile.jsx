@@ -57,7 +57,7 @@ function Profile() {
         {myCards.length === 0 ?(
           <p>no has creado ninguna card todavia</p>
         ): (
-          <div>
+          <div className="createdUserCards">
 
             {myCards.map(card =>(
               <Card key={card._id} card={card} showLikeButton={false} />
