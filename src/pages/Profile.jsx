@@ -32,7 +32,7 @@ function Profile() {
       const user = JSON.parse(localStorage.getItem("user"))
 
       if (!user) {
-        alert("debes estar registrado y logeado para acceder")
+        alert("debes estar registrado y logeado para acceder a tu perfíl")
         navigate("/login")
       }
     },[])
