@@ -50,12 +50,24 @@ function Profile() {
         <div className="cardsContainer">
           {likedCards.map(card => (
             <Card key={card._id} card={card} showLikeButton={false} />
-
-
-
           ))}
         </div>
       )}
+        <h2>Mis cards creadas</h2>
+        {myCards.length === 0 ?(
+          <p>no has creado ninguna card todavia</p>
+        ): (
+          <div>
+
+            {myCards.map(card =>(
+              <Card key={card._id} card={card}/>
+            ))}
+            
+          </div>
+
+        )
+      }
+
     </div>
   )
 }
