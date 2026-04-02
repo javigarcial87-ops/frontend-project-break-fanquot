@@ -30,7 +30,7 @@ function Register() {
                         ¿Ya tienes cuenta?{" "}
                         <span 
                             onClick={()=>navigate("/register")}
-                            style={{color:yelow, cursor:"pointer"}}
+                            style={{color:yellow, cursor:"pointer"}}
                             >
                             Logéate
                         </span>

@@ -25,7 +25,7 @@ function Profile() {
     },[])
     
     const myCards = cards.filter(
-      card => card.createdBy ===user?._id
+      card => card.createdBy === user?._id
     )
     
     useEffect(()=> {
