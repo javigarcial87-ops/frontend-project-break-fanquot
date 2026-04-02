@@ -31,7 +31,9 @@ function Admin() {
     }
 
     
-    const filteredCards = cards.filter(card=>
+    const filteredCards = search.trim() === ""
+      ? []
+      : cards.filter(card =>
         card.characterName.toLowerCase().includes(search.toLowerCase()) ||
         card.mediaTitle.toLowerCase().includes(search.toLowerCase())
     )
@@ -56,6 +58,8 @@ function Admin() {
                 <div key={card._id} className="adminSearch">
                     <h3>{card.characterName}</h3>
                     <p>{card.mediaTitle}</p>
+                    <p>{new Date(card.createdAt).toLocaleString()}</p>
+                    <p>Usuario: {card.createdBy}</p>
 
                     <button onClick={()=>handleDelete(card._id)} className="btnDlt">
                     Borrar card
