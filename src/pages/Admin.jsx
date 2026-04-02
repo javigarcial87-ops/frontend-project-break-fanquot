@@ -59,7 +59,7 @@ function Admin() {
                     <h3>{card.characterName}</h3>
                     <p>{card.mediaTitle}</p>
                     <p>{new Date(card.createdAt).toLocaleString()}</p>
-                    <p>Usuario: {card.createdBy}</p>
+                    <p>Usuario: {card.createdByName || "usuario desconocido"}</p>
 
                     <button onClick={()=>handleDelete(card._id)} className="btnDlt">
                     Borrar card

@@ -31,7 +31,8 @@ function CreateCard() {
         ...form,
         likes: 0,
         likedBy: [],
-        createdBy: user._id
+        createdBy: user._id,
+        CreatedByName: user.username || user.email
       })
 
       setForm({
