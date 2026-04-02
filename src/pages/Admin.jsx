@@ -42,7 +42,7 @@ function Admin() {
         <>
         <div className="adminPanel">
             <h1>Panel administrador</h1>
-
+            <p>Busca la card por nombre de personaje o titulo de medio</p>
             
             <input 
             type="text"
