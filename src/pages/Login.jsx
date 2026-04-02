@@ -54,7 +54,7 @@ return (
               ¿Todavía no tienes cuenta?{" "}
               <span 
                 onClick={()=>navigate("/register")}
-                style={{color:yellow, cursor:"pointer"}}
+                style={{color:"yellow", cursor:"pointer"}}
               >
                 Regístrate
               </span>
