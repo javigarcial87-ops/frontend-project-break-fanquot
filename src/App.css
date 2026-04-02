@@ -393,3 +393,21 @@
 .createdUserCards{
   transform: scale(0.7);
 }
+
+@media (max-width: 768px) {
+  .navBar {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .imgLogo {
+    width: 140px;
+  }
+
+  .userName {
+    font-size: 12px;
+    padding: 5px;
+  }
+}
