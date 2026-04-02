@@ -87,10 +87,10 @@ useEffect(()=>{
           required
                 >
               <option value="">Selecciona el tipo de medio</option>
-              <option value="cine">MOVIE</option>
+              <option value="movie">MOVIE</option>
               <option value="tv">TV</option>
-              <option value="juegos">GAMING</option>
-              <option value="literatura">BOOK</option>
+              <option value="gaming">GAMING</option>
+              <option value="book">BOOK</option>
 
         </select>
 
