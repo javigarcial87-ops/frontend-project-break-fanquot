@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom"
 import { createCard } from "../services/cardService"
 
 function CreateCard() {
+  const user =JSON.parse(localStorage.getItem("user"))
   const navigate = useNavigate()
 
 
@@ -29,7 +30,8 @@ function CreateCard() {
       await createCard({
         ...form,
         likes: 0,
-        likedBy: []
+        likedBy: [],
+        createdBy: user._id
       })
 
       setForm({

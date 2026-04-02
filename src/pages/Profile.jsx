@@ -23,7 +23,10 @@ function Profile() {
         })
         .catch(err => console.error(err))
     },[])
-
+    
+    const myCards = cards.filter(
+      card => card.createdBy ===user?._id
+    )
     
     useEffect(()=> {
       const user = JSON.parse(localStorage.getItem("user"))
@@ -47,6 +50,9 @@ function Profile() {
         <div className="cardsContainer">
           {likedCards.map(card => (
             <Card key={card._id} card={card} showLikeButton={false} />
+
+
+
           ))}
         </div>
       )}
