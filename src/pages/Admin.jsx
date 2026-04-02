@@ -43,10 +43,10 @@ function Admin() {
         <div className="adminPanel">
             <h1>Panel administrador</h1>
             <p>Busca la card por nombre de personaje o titulo de medio</p>
+            <p>Podrás editar o eliminar cards desde aquí</p>
             
             <input 
             type="text"
-            placeholder="Busca por nombre de personaje o titulo donde aparece"
             value={search}
             onChange={(e)=>setSearch(e.target.value)}
             className="searchInput"
