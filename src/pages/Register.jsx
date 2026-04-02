@@ -29,7 +29,7 @@ function Register() {
                      <p>
                         ¿Ya tienes cuenta?{" "}
                         <span 
-                            onClick={()=>navigate("/register")}
+                            onClick={()=>navigate("/login")}
                             style={{color:"yellow", cursor:"pointer"}}
                             >
                             Logéate
