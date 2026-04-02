@@ -26,6 +26,15 @@ function Register() {
         <>
                 <form onSubmit={handleSubmit} className="registerForm">
                     <h2>REGISTRATE</h2>
+                     <p>
+                        ¿Ya tienes cuenta?{" "}
+                        <span 
+                            onClick={()=>navigate("/register")}
+                            style={{color:yelow, cursor:"pointer"}}
+                            >
+                            Logéate
+                        </span>
+              </p>
                     <input name="username" placeholder="Nombre de Usuario" onChange={handleChange} required />
                     <input name="email" placeholder="Email" onChange={handleChange} required/>
                     <input name="password" placeholder="Password" onChange={handleChange} required/>

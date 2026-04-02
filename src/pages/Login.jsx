@@ -50,6 +50,15 @@ return (
         <>
         <form onSubmit={handleSubmit} className="loginForm">
             <h2>ACCEDE</h2>
+            <p>
+              ¿Todavía no tienes cuenta?{" "}
+              <span 
+                onClick={()=>navigate("/register")}
+                style={{color:yelow, cursor:"pointer"}}
+              >
+                Regístrate
+              </span>
+              </p>
             <input name="email" value={form.email} placeholder="Email" onChange={handleChange} required />
             <input name="password" type="password" value={form.password}  placeholder="Password" onChange={handleChange} required />
             <button className="btnLogin">Login</button>
