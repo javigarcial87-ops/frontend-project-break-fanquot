@@ -60,7 +60,7 @@ function Profile() {
           <div>
 
             {myCards.map(card =>(
-              <Card key={card._id} card={card}/>
+              <Card key={card._id} card={card} showLikeButton={false} />
             ))}
             
           </div>
