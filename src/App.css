@@ -392,6 +392,8 @@
 }
 
 .createdUserCards{
+  display: flex;
+  flex-direction: row;
   transform: scale(0.7);
 }
 
