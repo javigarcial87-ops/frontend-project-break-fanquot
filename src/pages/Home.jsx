@@ -70,7 +70,7 @@ const handleLike = async (cardId) => {
 
           {topCard && (
             <div>
-              <h2 className="topTitle">DESTACADO</h2>
+              <h2 className="topTitle">EL DESTACADO</h2>
               
               <div className="sideTopCard">
                 <h3>{topCard.characterName}</h3>
