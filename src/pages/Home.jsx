@@ -71,6 +71,7 @@ const handleLike = async (cardId) => {
           {topCard && (
             <div>
               <h2 className="topTitle">DESTACADO</h2>
+              <p>La que más gusta</p>
               <div className="sideTopCard">
                 <h3>{topCard.characterName}</h3>
                 <img src={topCard.characterImage} />
