@@ -368,7 +368,7 @@
 .sideTopCard{
  
   max-width: 300px;
-  height: 400px;
+  height: 600px;
   display: flex;
   flex-direction: column;
   gap: 10px;
